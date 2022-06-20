@@ -1,5 +1,7 @@
 package com.administration.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,5 +28,14 @@ public class UGService {
 		}
 			
 		
+	}
+	public List<UGRegistration> findAll() throws Exception{
+		List<UGRegistration> listUgAdmission=null;
+		try {
+			listUgAdmission=ugRepository.findAll();	
+		}catch(Exception e) {
+				throw new Exception(e.getMessage());
+		}
+		return listUgAdmission;
 	}
 }

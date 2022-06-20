@@ -1,5 +1,7 @@
 package com.administration.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,5 +27,14 @@ public class LateralEntryService {
 		}
 			
 		
+	}
+	public List<LateralEntry> findAll() throws Exception{
+		List<LateralEntry> listPgAdmission=null;
+		try {
+			listPgAdmission=lateralRepository.findAll();	
+		}catch(Exception e) {
+				throw new Exception(e.getMessage());
+		}
+		return listPgAdmission;
 	}
 }
