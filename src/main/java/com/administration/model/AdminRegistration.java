@@ -20,13 +20,13 @@ public class AdminRegistration {
 	@Column(name="Id")
 	private Integer id;
 	@Column(name="Email_Id")
-	private String emailId;
+	private String email;
 	@Column(name="Admin_Name")
 	private String adminName;
 	@Column(name="Phone_Number")
 	private long phoneNumber;
 	@Column(name="Admin_Password")
-	private String adminPassword;
+	private String password;
 	@Column(name="Role_Admin")
 	private String roleAdmin;
 	

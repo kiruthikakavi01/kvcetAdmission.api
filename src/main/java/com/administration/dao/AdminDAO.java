@@ -11,5 +11,7 @@ import com.administration.model.AdminRegistration;
 
 @Repository
 public interface AdminDAO  extends JpaRepository<AdminRegistration,Integer>{
-	Optional<AdminRegistration> findByEmailAndPassword(String email, String password);
+
+	Optional<AdminRegistration> findByEmailAndPassword(String emailId, String adminPassword);
+	
 }

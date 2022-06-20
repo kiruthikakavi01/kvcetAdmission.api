@@ -27,10 +27,10 @@ public class AdminRegistrationService {
 			throw new Exception(e.getMessage());
 		}
 	}
-	public String  login(AdminRegistration registration) throws Exception {
+	public String  login(AdminRegistration reg) throws Exception {
 		try {
 			
-			Optional<AdminRegistration> adminObj = adminRepository.findByEmailAndPassword(registration.getEmailId(),registration.getAdminPassword());
+			Optional<AdminRegistration> adminObj = adminRepository.findByEmailAndPassword(reg.getEmail(),reg.getPassword());
 			System.out.println(adminObj);
 			if (adminObj.isPresent()) {
 				return "success";

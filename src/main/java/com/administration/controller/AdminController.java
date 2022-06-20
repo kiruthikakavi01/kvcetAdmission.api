@@ -39,9 +39,9 @@ public class AdminController {
 	public MessageDTO login(@RequestBody AdminRegistration registration) {
 		MessageDTO message = new MessageDTO();
 		try {
-			adminService.login(registration);
+			String res = adminService.login(registration);
 			
-			message.setMessage("admin");
+			message.setMessage(res);
 				return message;
 			
 		} catch (Exception e) {
